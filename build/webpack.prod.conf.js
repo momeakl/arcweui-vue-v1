@@ -142,8 +142,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '',
-    filename: 'arcweui-vue.min.js',
-    library: 'ArcWeuiVue',
+    filename: 'arcweui-vue-v1.min.js',
+    library: 'ArcWeuiVueV1',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -164,7 +164,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: 'arcweui-vue.min.css'
+      filename: 'arcweui-vue-v1.min.css'
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.

@@ -27,7 +27,7 @@ export default {
       if (!this.msgInfo.isWait) {
         switch (this.msgInfo.msgType) {
           case 'error':
-            className = 'ivu-icon-ion-close-round'
+            className = 'clouds-msg-error'
             break
           case 'success':
             className = 'weui-icon-success-no-circle'

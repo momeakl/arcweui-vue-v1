@@ -22,13 +22,8 @@
   </div>
 </template>
 <script>
-const TyImg = () => import('@/components/common/TyImg')
-
 export default {
   name: 'PeoperList',
-  components: {
-    TyImg
-  },
   props: {
     title: {
       type: String,

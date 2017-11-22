@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <header>
-      <Cell :leftNav="true" :text="title" v-on:go-back="goBack" :rightNav="false"></Cell>
+      <h1 v-text="title"></h1>
     </header>
     <div class="container">
       <router-view></router-view>
+      <LoadingToast :msgInfo="msgInfo"></LoadingToast>
     </div>
   </div>
 </template>
@@ -14,13 +15,20 @@ export default {
   name: 'app',
   data() {
     return {
-      title: 'ARC WX Component Demo'
+      title: 'ARC WX Component Demo v1',
+      msgInfo: {
+        msg: '数据加载中',
+        isShow: false,
+        isWait: false,
+        msgType: 'success'
+      }
     }
   },
-  mounted() {
-    if (location.hash !== '#/') {
-      this.title = location.hash.replace('#/', '')
-    }
+  created() {
+    TyCommon.closeWaiting()
+    bus.$on('showWaitingChange', (value) => {
+      this.msgInfo = value
+    })
   },
   methods: {
     goBack() {
@@ -53,7 +61,7 @@ header {
 }
 
 .container {
-  margin-top: 50px;
+  margin-top: 100px;
   z-index: 1;
 }
 </style>
