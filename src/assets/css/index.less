@@ -1,0 +1,220 @@
+[v-clock] {
+    visibility: hidden;
+}
+
+@date-time-fontsize: 12px;
+@foot-margin-bottom: 61px;
+@primaryColor: #26a2ff;
+.date-time-fontsize {
+    font-size: @date-time-fontsize;
+}
+
+.foot-margin-bottom {
+    margin-bottom: @foot-margin-bottom;
+}
+
+.foot-padding-bottom{
+  padding-bottom:@foot-margin-bottom;
+}
+
+.mint-cell-wrapper {
+    background-image: none !important;
+    padding: 0 15px;
+}
+
+.mint-cell-value.is-link {
+    margin-right: 15px;
+}
+
+.mint-switch-core {
+    width: 41px;
+    height: 25px;
+    &:before,
+    &:after {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@cell-label-color: #999;
+.ty-cell-label {
+    color: @cell-label-color;
+    font-size: 12px;
+}
+
+.mint-cell-label {
+    color: @cell-label-color
+}
+
+.mint-cell-value {
+    color: @cell-label-color;
+    font-size: 15px;
+}
+
+.mint-cell-title {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.mint-cell-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mint-cell:last-child {
+    background-image: none;
+}
+
+.clear-border-mt.weui-cells {
+    margin-top: 0px;
+}
+
+.mint-datetime-cancel {
+    color: #888;
+    text-align: left;
+}
+
+.mint-datetime-confirm {
+    text-align: right;
+}
+
+.mint-datetime-action {
+    line-height: 43px;
+}
+
+.picker-toolbar {
+    padding: 0px 15px;
+    height: 43px;
+}
+
+// 消除最后一个元素的bottom
+.clear-border-bottom {
+    &:after {
+        border-bottom: none !important;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.weui-icon_toast {
+    font-size: 55px;
+}
+
+.weui-cells:after {
+    border-bottom: none;
+}
+
+.clear-weui-cells-before {
+    .weui-cells:before {
+        border-top: none;
+    }
+}
+
+.weui-cells {
+    margin-top: 0px;
+    font-size: 15px;
+    &:before {
+        left: 15px;
+    }
+}
+
+.weui-cells-clear-left,
+.weui-cells-clear-left:before {
+    left: 0px;
+}
+
+html,
+body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+}
+
+.weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before {
+    color: @primaryColor !important;
+}
+
+.weui-picker__action {
+    color: @primaryColor;
+}
+
+.weui-search-bar__cancel-btn {
+    color: @primaryColor;
+}
+
+.weui-btn_primary {
+    background-color: @primaryColor
+}
+
+.weui-btn_primary:active{
+    background-color: @primaryColor !important
+}
+
+.weui-dialog__btn_primary {
+    color: @primaryColor
+}
+
+.clouds-delete {
+    color: #999999;
+}
+
+.clouds-has-read,
+.clouds-has-agreed,
+.clouds-has-leave,
+.clouds-has-consent,
+.clouds-has-rejected {
+    color: #e35d5d;
+    font-size: 25px;
+    display: block;
+}
+
+.clouds-has-join {
+    color: #65c490;
+    font-size: 25px;
+    display: block;
+}
+
+.desc-text {
+    color: #333;
+    font-size: 15px;
+}
+
+.mint-button {
+    font-size: 15px;
+}
+
+.text-primary {
+    color: @primaryColor
+}
+
+.font-sise-15 {
+    font-size: 15px;
+}
+
+.text-warn {
+    color: #e64340;
+}
+
+.text-audit {
+    color: #333;
+}
+
+.ty-circle-time,
+.ty-circle-now {
+    line-height: 0;
+    font-size: 12px;
+    margin-top: -6px;
+}
+
+.ty-circle-body {}
+
+.ty-circle-now {
+    margin-top: -20px;
+    font-size: 16px;
+}
+
+// 字体图标
+.icon-responsible:before {
+    color: @primaryColor
+}
