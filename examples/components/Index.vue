@@ -23,6 +23,15 @@
       <mt-button @click="clickHandler('TyContent')">TyContent</mt-button>
       <mt-button @click="clickHandler('TyDatetimePicker')">TyDatetimePicker</mt-button>
     </div>
+    <div>
+      <mt-button @click="clickHandler('TyFaceBox')">TyFaceBox</mt-button>
+      <mt-button @click="clickHandler('TyFileList')">TyFileList</mt-button>
+      <mt-button @click="clickHandler('TyFooter')">TyFooter</mt-button>
+    </div>
+    <div>
+      <mt-button @click="clickHandler('TyFooterOneButton')">TyFooterOneButton</mt-button>
+      <mt-button @click="clickHandler('TyGeneralCell')">TyGeneralCell</mt-button>
+    </div>
 
   </div>
 </template>

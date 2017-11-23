@@ -1,2 +1,2 @@
-import TyFileList from './TyFileList.vue'
+import TyFileList from './TyFooter.vue'
 export default TyFileList

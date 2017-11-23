@@ -15,6 +15,11 @@ import TyCellWithImg from './components/ty-cell-with-img'
 import TyCircle from './components/ty-circle'
 import TyContent from './components/ty-content'
 import TyDatetimePicker from './components/ty-datetime-picker'
+import TyFaceBox from './components/ty-facebox'
+import TyFileList from './components/ty-file-list'
+import TyFooter from './components/ty-footer'
+import TyFooterOneButton from './components/ty-footer-one-button'
+import TyGeneralCell from './components/ty-general-cell'
 
 require('core-js')
 const ArcWeUiV1 = {
@@ -29,7 +34,12 @@ const ArcWeUiV1 = {
   TyCellWithImg,
   TyCircle,
   TyContent,
-  TyDatetimePicker
+  TyDatetimePicker,
+  TyFaceBox,
+  TyFileList,
+  TyFooter,
+  TyFooterOneButton,
+  TyGeneralCell
 }
 
 const install = function(Vue, config = {}) {

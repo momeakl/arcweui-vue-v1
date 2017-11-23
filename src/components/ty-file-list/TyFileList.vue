@@ -27,7 +27,6 @@
   </div>
 </template>
 <script>
-import 'core-js/fn/array/includes'
 export default {
   name: 'TyFileList',
   props: {
