@@ -17,7 +17,6 @@
   </a>
 </template>
 <script>
-
 export default {
   name: 'TyCellWithImg',
   props: {

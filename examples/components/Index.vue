@@ -8,6 +8,17 @@
       <mt-button @click="clickHandler('TyImg')">img 懒加载</mt-button>
       <mt-button @click="clickHandler('PeoperList')">人员选择示例</mt-button>
     </div>
+    <div>
+      <mt-button @click="clickHandler('SeparateLines')">分隔线</mt-button>
+      <mt-button @click="clickHandler('TyEmpty')">空内容背景</mt-button>
+      <mt-button @click="clickHandler('TyAutoLoad')">自动加载</mt-button>
+    </div>
+    <div>
+      <mt-button @click="clickHandler('TyCell')">Cell</mt-button>
+      <mt-button @click="clickHandler('TyCellSuper')">更强的cell</mt-button>
+      <mt-button @click="clickHandler('TyCellWithImg')">img cell</mt-button>
+    </div>
+
   </div>
 </template>
 <script>

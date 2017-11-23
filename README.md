@@ -29,6 +29,18 @@ Vue.use(ArcWeUIV1)
 
    peoperlist
 
+   separate-lines
+
+   ty-auto-load
+
+   ty-cell
+
+   ty-cell-super
+
+   ty-cell-with-img
+
+   ty-empty
+
 
 ## Links
 

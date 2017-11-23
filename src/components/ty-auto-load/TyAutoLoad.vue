@@ -10,15 +10,8 @@
   </div>
 </template>
 <script>
-const SeparateLines = () => import('@/components/common/SeparateLines')
-const TyEmpty = () => import('@/components/common/TyEmpty')
-
 export default {
   name: 'TyAutoLoad',
-  components: {
-    SeparateLines,
-    TyEmpty
-  },
   props: {
     isLoadMore: {
       type: Boolean,

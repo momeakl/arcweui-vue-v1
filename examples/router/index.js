@@ -6,6 +6,12 @@ let components = []
 components.push({ component: 'Index', name: 'Index', path: '/' })
 components.push({ component: 'TyImg', name: 'TyImg', path: '/TyImg' })
 components.push({ component: 'PeoperList', name: 'PeoperList', path: '/PeoperList' })
+components.push({ component: 'SeparateLines', name: 'SeparateLines', path: '/SeparateLines' })
+components.push({ component: 'TyEmpty', name: 'TyEmpty', path: '/TyEmpty' })
+components.push({ component: 'TyAutoLoad', name: 'TyAutoLoad', path: '/TyAutoLoad' })
+components.push({ component: 'TyCell', name: 'TyCell', path: '/TyCell' })
+components.push({ component: 'TyCellSuper', name: 'TyCellSuper', path: '/TyCellSuper' })
+components.push({ component: 'TyCellWithImg', name: 'TyCellWithImg', path: '/TyCellWithImg' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
