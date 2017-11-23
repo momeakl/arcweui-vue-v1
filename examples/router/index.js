@@ -13,6 +13,10 @@ components.push({ component: 'TyCell', name: 'TyCell', path: '/TyCell' })
 components.push({ component: 'TyCellSuper', name: 'TyCellSuper', path: '/TyCellSuper' })
 components.push({ component: 'TyCellWithImg', name: 'TyCellWithImg', path: '/TyCellWithImg' })
 
+components.push({ component: 'TyCircle', name: 'TyCircle', path: '/TyCircle' })
+components.push({ component: 'TyContent', name: 'TyContent', path: '/TyContent' })
+components.push({ component: 'TyDatetimePicker', name: 'TyDatetimePicker', path: '/TyDatetimePicker' })
+
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
   let element = components[index]

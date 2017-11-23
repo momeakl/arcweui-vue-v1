@@ -12,6 +12,10 @@ import TyCell from './components/ty-cell'
 import TyCellSuper from './components/ty-cell-super'
 import TyCellWithImg from './components/ty-cell-with-img'
 
+import TyCircle from './components/ty-circle'
+import TyContent from './components/ty-content'
+import TyDatetimePicker from './components/ty-datetime-picker'
+
 require('core-js')
 const ArcWeUiV1 = {
   LoadingToast,
@@ -22,7 +26,10 @@ const ArcWeUiV1 = {
   TyAutoLoad,
   TyCell,
   TyCellSuper,
-  TyCellWithImg
+  TyCellWithImg,
+  TyCircle,
+  TyContent,
+  TyDatetimePicker
 }
 
 const install = function(Vue, config = {}) {

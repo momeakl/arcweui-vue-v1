@@ -18,6 +18,11 @@
       <mt-button @click="clickHandler('TyCellSuper')">更强的cell</mt-button>
       <mt-button @click="clickHandler('TyCellWithImg')">img cell</mt-button>
     </div>
+    <div>
+      <mt-button @click="clickHandler('TyCircle')">TyCircle</mt-button>
+      <mt-button @click="clickHandler('TyContent')">TyContent</mt-button>
+      <mt-button @click="clickHandler('TyDatetimePicker')">TyDatetimePicker</mt-button>
+    </div>
 
   </div>
 </template>
