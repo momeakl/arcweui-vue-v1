@@ -41,6 +41,22 @@ Vue.use(ArcWeUIV1)
 
    ty-empty
 
+   ty-circle
+
+   ty-content
+
+   ty-datetime-picker
+
+   ty-facebox
+
+   ty-file-list
+
+   ty-footer
+
+   ty-footer-one-button
+
+   ty-general-cell
+
 
 ## Links
 
