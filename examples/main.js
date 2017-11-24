@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/base.less'
 
 import ArcWeUIV1 from '@/index.js'
 import * as common from '$demo/assets/js/common'

@@ -73,9 +73,13 @@ export default {
   data() {
     return {}
   },
+  mounted() {
+    this.$parent.$parent.goBackUrl = true
+  },
   methods: {
     clickHandler(name) {
-      this.$parent.title = name
+      this.$parent.$parent.title = name
+      this.$parent.$parent.goBackUrl = false
       this.$router.push(name)
     },
     toast(type) {
@@ -89,14 +93,5 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-.examples-index {
-  .weui-btn {
-    width: 40%;
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-</style>
 
 
