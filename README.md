@@ -57,6 +57,12 @@ Vue.use(ArcWeUIV1)
 
    ty-general-cell
 
+   ty-hours-label
+
+   ty-label
+
+   ty-listitem
+
 
 ## Links
 

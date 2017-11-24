@@ -62,7 +62,7 @@
         <i class="fa fa-bars" slot="icon"></i>
       </mt-cell>
       <mt-cell title="TyListItem" is-link @click.native="clickHandler('TyListItem')">
-        <i class="fa fa-bars" slot="icon"></i>
+        <i class="fa fa-check-square-o" slot="icon"></i>
       </mt-cell>
     </div>
 

@@ -12,7 +12,6 @@ components.push({ component: 'TyAutoLoad', name: 'TyAutoLoad', path: '/TyAutoLoa
 components.push({ component: 'TyCell', name: 'TyCell', path: '/TyCell' })
 components.push({ component: 'TyCellSuper', name: 'TyCellSuper', path: '/TyCellSuper' })
 components.push({ component: 'TyCellWithImg', name: 'TyCellWithImg', path: '/TyCellWithImg' })
-
 components.push({ component: 'TyCircle', name: 'TyCircle', path: '/TyCircle' })
 components.push({ component: 'TyContent', name: 'TyContent', path: '/TyContent' })
 components.push({ component: 'TyDatetimePicker', name: 'TyDatetimePicker', path: '/TyDatetimePicker' })
@@ -21,7 +20,6 @@ components.push({ component: 'TyFileList', name: 'TyFileList', path: '/TyFileLis
 components.push({ component: 'TyFooter', name: 'TyFooter', path: '/TyFooter' })
 components.push({ component: 'TyFooterOneButton', name: 'TyFooterOneButton', path: '/TyFooterOneButton' })
 components.push({ component: 'TyGeneralCell', name: 'TyGeneralCell', path: '/TyGeneralCell' })
-
 components.push({ component: 'TyHoursLabel', name: 'TyHoursLabel', path: '/TyHoursLabel' })
 components.push({ component: 'TyLabel', name: 'TyLabel', path: '/TyLabel' })
 components.push({ component: 'TyListItem', name: 'TyListItem', path: '/TyListItem' })
