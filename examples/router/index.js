@@ -22,6 +22,10 @@ components.push({ component: 'TyFooter', name: 'TyFooter', path: '/TyFooter' })
 components.push({ component: 'TyFooterOneButton', name: 'TyFooterOneButton', path: '/TyFooterOneButton' })
 components.push({ component: 'TyGeneralCell', name: 'TyGeneralCell', path: '/TyGeneralCell' })
 
+components.push({ component: 'TyHoursLabel', name: 'TyHoursLabel', path: '/TyHoursLabel' })
+components.push({ component: 'TyLabel', name: 'TyLabel', path: '/TyLabel' })
+components.push({ component: 'TyListItem', name: 'TyListItem', path: '/TyListItem' })
+
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
   let element = components[index]
@@ -34,7 +38,6 @@ for (let index = 0; index < components.length; index++) {
 }
 
 Vue.use(Router)
-
 export default new Router({
   routes: routerObj
 })

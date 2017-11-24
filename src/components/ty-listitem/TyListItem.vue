@@ -9,12 +9,8 @@
   </TyCellSuper>
 </template>
 <script>
-const TyCellSuper = () => import('@/components/common/TyCellSuper')
 export default {
   name: 'TyListItem',
-  components: {
-    TyCellSuper
-  },
   props: {
     showChecked: {
       type: Boolean,

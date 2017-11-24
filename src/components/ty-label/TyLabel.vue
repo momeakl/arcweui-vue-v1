@@ -41,7 +41,7 @@ export default {
 }
 
 .ty-label.fix {
-  position: fixed;
+  position: fixed; z-index: 1000;
 }
 
 .ty-label.top {

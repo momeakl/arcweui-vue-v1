@@ -13,12 +13,12 @@
   </div>
 </template>
 <script type="text/babel">
-const SeparateLines = () => import('@/components/common/SeparateLines')
+//const SeparateLines = () => import('@/components/common/SeparateLines')
 
 export default {
   name: 'TyLoadMore',
   components: {
-    SeparateLines
+    //SeparateLines
   },
   props: {
     isAllLoad: {
@@ -40,7 +40,7 @@ export default {
   watch: {
     isAllLoad(newValue) {
       this.allLoaded = newValue
-      TyCommon.closeWaiting()
+      this.$toast()
     }
   },
   mounted() {
@@ -70,7 +70,7 @@ export default {
             if (containerObj) {
               containerObj.scrollTop = 0
             }
-            TyCommon.closeWaiting()
+            this.$toast()
           }
         }, 500)
       }, 1000)

@@ -11,7 +11,6 @@ import TyAutoLoad from './components/ty-auto-load'
 import TyCell from './components/ty-cell'
 import TyCellSuper from './components/ty-cell-super'
 import TyCellWithImg from './components/ty-cell-with-img'
-
 import TyCircle from './components/ty-circle'
 import TyContent from './components/ty-content'
 import TyDatetimePicker from './components/ty-datetime-picker'
@@ -20,6 +19,11 @@ import TyFileList from './components/ty-file-list'
 import TyFooter from './components/ty-footer'
 import TyFooterOneButton from './components/ty-footer-one-button'
 import TyGeneralCell from './components/ty-general-cell'
+
+import TyHoursLabel from './components/ty-hours-label'
+import TyLabel from './components/ty-label'
+import TyListItem from './components/ty-listitem'
+import TyLoadMore from './components/ty-loadmore'
 
 require('core-js')
 const ArcWeUiV1 = {
@@ -39,7 +43,11 @@ const ArcWeUiV1 = {
   TyFileList,
   TyFooter,
   TyFooterOneButton,
-  TyGeneralCell
+  TyGeneralCell,
+  TyHoursLabel,
+  TyLabel,
+  TyListItem,
+  TyLoadMore
 }
 
 const install = function(Vue, config = {}) {
