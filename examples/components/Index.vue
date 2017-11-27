@@ -64,6 +64,24 @@
       <mt-cell title="TyListItem" is-link @click.native="clickHandler('TyListItem')">
         <i class="fa fa-check-square-o" slot="icon"></i>
       </mt-cell>
+      <mt-cell title="TyPicker" is-link @click.native="clickHandler('TyPicker')">
+        <i class="fa fa-bolt" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyPrompt" is-link @click.native="clickHandler('TyPrompt')">
+        <i class="fa fa-text-width" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyTopTips" is-link @click.native="clickHandler('TyTopTips')">
+        <i class="fa fa-comment-o" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyRemark" is-link @click.native="clickHandler('TyRemark')">
+        <i class="fa fa-pencil-square-o" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyReplyContent" is-link @click.native="clickHandler('TyReplyContent')">
+        <i class="fa fa-reply" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyReplyList" is-link @click.native="clickHandler('TyReplyList')">
+        <i class="fa fa-list" slot="icon"></i>
+      </mt-cell>
     </div>
 
   </div>

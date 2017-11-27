@@ -12,23 +12,12 @@
   </div>
 </template>
 <script>
-const TyCell = () => import('@/components/common/TyCell')
-const TyAutoLoad = () => import('@/components/common/TyAutoLoad')
-
 export default {
   name: 'TyReplyList',
-  components: {
-    TyCell,
-    TyAutoLoad
-  },
   props: {
     data: {
       type: Array,
       default: []
-    },
-    loading: {
-      type: Boolean,
-      default: false
     },
     isLoadMore: {
       type: Boolean,

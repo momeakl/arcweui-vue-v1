@@ -5,7 +5,7 @@
       <div class=" weui-dialog__hd " style="border-bottom:1px solid #d5d5d6; ">
         <strong class="weui-dialog__title" v-html="title"></strong>
       </div>
-      <textarea class="weui_textarea " rows="3 " v-model="content "></textarea>
+      <textarea class="weui_textarea " rows="3 " v-model="input "></textarea>
       <div class="weui-dialog__ft ">
         <a class="weui-dialog__btn weui-dialog__btn_default " @click="cancel(false)">取消</a>
         <a class="weui-dialog__btn weui-dialog__btn_primary " @click="ok">确定</a>
@@ -31,18 +31,25 @@ export default {
   watch: {
     value(newValue) {
       this.visible = newValue
+      if (this.input !== this.content) {
+        this.input = this.content
+      }
+    },
+    content(newValue) {
+      this.input = newValue
     }
   },
   data() {
     return {
-      visible: this.value
+      visible: this.value,
+      input: this.content
     }
   },
   methods: {
     cancel(result) {
       this.visible = false
       this.$emit('input', false)
-      this.$emit('prompt', result, this.content)
+      this.$emit('prompt', result, this.input)
     },
     ok() {
       this.cancel(true)

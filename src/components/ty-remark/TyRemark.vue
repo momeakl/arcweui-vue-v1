@@ -3,19 +3,12 @@
     <div class="content">
       <textarea class="weui-textarea" v-model="remark" placeholder="内容（50个字符以内）" rows="6" id="div_sign_in_remark_content"></textarea>
     </div>
-    <TyPeoperList :clearBorderTop="true" v-on:open-contacts="initWxSdk" :show-add="true" :data="relatedPersons"></TyPeoperList>
+    <PeoperList :clearBorderTop="true" v-on:open-contacts="initWxSdk" :show-add="true" :data="relatedPersons"></PeoperList>
     <TyFooter v-model="submitLoadingIndex" :btn-name="['取消','确定']" v-on:click="clickHandler"></TyFooter>
     <TyTopTips v-model="topTipsMsg"></TyTopTips>
   </div>
 </template>
 <script>
-import 'core-js/fn/array/find'
-import 'core-js/fn/array/find-index'
-
-const TyFooter = () => import('@/components/common/TyFooter')
-const TyTopTips = () => import('@/components/common/TyTopTips')
-const TyPeoperList = () => import('@/components/common/PeoperList')
-
 export default {
   name: 'TyRemark',
   props: {
@@ -29,11 +22,6 @@ export default {
         return []
       }
     }
-  },
-  components: {
-    TyFooter,
-    TyTopTips,
-    TyPeoperList
   },
   data() {
     return {
@@ -76,16 +64,8 @@ export default {
       this.submitLoadingIndex = -1
     },
     initWxSdk() {
-      /* eslint-disable */
       if (!wx) {
         TyCommon.info('初始化人员信息')
-        wx = require('weixin-js-sdk')
-        window.wx = wx
-        CodeSnippet.wxJsSdkInit((result) => {
-          this.wxData = result
-          this.isJsSdk = true
-          this.openContacts()
-        })
       } else {
         if (!this.wxData) {
           TyCommon.info('初始化人员信息')
@@ -98,7 +78,6 @@ export default {
           this.openContacts()
         }
       }
-      /* eslint-disable */
     },
     openContacts() {
       if (!this.isJsSdk) {

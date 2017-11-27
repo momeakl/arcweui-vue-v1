@@ -21,20 +21,10 @@
   </div>
 </template>
 <script>
-const TyFooter = () => import('@/components/common/TyFooter')
-const TyFaceBox = () => import('@/components/common/TyFaceBox')
-const TyTopTips = () => import('@/components/common/TyTopTips')
-
-let wx = null
 let contentDom = null
 
 export default {
   name: 'TyReplyContent',
-  components: {
-    TyFooter,
-    TyFaceBox,
-    TyTopTips
-  },
   data() {
     return {
       submitLoadingIndex: -1,
@@ -81,15 +71,12 @@ export default {
     initWxSdk() {
       if (!wx) {
         TyCommon.info('初始化人员信息')
-        wx = require('weixin-js-sdk')
-        window.wx = wx
+      } else {
         CodeSnippet.wxJsSdkInit((result) => {
           this.wxData = result
           this.isJsSdk = true
           this.openContacts()
         })
-      } else {
-        this.openContacts()
       }
     },
     openContacts() {

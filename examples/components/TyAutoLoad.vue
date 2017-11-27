@@ -31,7 +31,7 @@ export default {
           this.items.push(this.startNumber++)
         }
       }
-    },
+    }
   }
 }
 </script>

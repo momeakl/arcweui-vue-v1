@@ -23,7 +23,14 @@ import TyGeneralCell from './components/ty-general-cell'
 import TyHoursLabel from './components/ty-hours-label'
 import TyLabel from './components/ty-label'
 import TyListItem from './components/ty-listitem'
-import TyLoadMore from './components/ty-loadmore'
+import TyPicker from './components/ty-picker'
+import TyPrompt from './components/ty-prompt'
+import TyTopTips from './components/ty-toptips'
+import TyRemark from './components/ty-remark'
+import TyReplyContent from './components/ty-reply-content'
+import TyReplyList from './components/ty-reply-list'
+
+import axios from 'axios'
 
 require('core-js')
 const ArcWeUiV1 = {
@@ -47,19 +54,26 @@ const ArcWeUiV1 = {
   TyHoursLabel,
   TyLabel,
   TyListItem,
-  TyLoadMore
+  TyPicker,
+  TyPrompt,
+  TyTopTips,
+  TyRemark,
+  TyReplyContent,
+  TyReplyList
 }
 
 const install = function(Vue, config = {}) {
   Object.keys(ArcWeUiV1).forEach(key => {
     Vue.component(key, ArcWeUiV1[key])
   })
+
   Vue.use(Mint, {
     lazyload: {
       error: require('./assets/img/head.png'),
       loading: require('./assets/img/head.png')
     }
   })
+  Vue.prototype.$http = axios
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

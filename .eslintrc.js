@@ -9,6 +9,13 @@ module.exports = {
   env: {
     browser: true,
   },
+  'globals': {
+    'TyCommon': true,
+    'bus': true,
+    'WeixinJSBridge': true,
+    'CodeSnippet': true,
+    'wx': true
+  },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',
   // required to lint *.vue files

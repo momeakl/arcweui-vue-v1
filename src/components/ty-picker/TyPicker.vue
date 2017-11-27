@@ -7,7 +7,6 @@
   </div>
 </template>
 <script>
-import 'core-js/fn/array/find'
 export default {
   name: 'TyPicker',
   props: {
@@ -52,6 +51,7 @@ export default {
       }
     },
     showPop() {
+      /* eslint-disable no-undef */
       weui.picker(this.datas, {
         container: this.pickerContainer,
         id: this.pickerContainer,
