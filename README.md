@@ -63,6 +63,18 @@ Vue.use(ArcWeUIV1)
 
    ty-listitem
 
+   TyPicker
+
+   TyPrompt
+
+   TyTopTips
+
+   TyRemark
+
+   TyReplyContent
+
+   TyReplyList
+
 
 ## Links
 
