@@ -78,8 +78,8 @@ const install = function(Vue, config = {}) {
 
   Vue.use(Mint, {
     lazyload: {
-      error: require('./assets/img/head.png'),
-      loading: require('./assets/img/head.png')
+      error: require('./assets/head.png'),
+      loading: require('./assets/head.png')
     }
   })
   Vue.prototype.$http = axios
