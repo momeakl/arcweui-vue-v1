@@ -6,6 +6,7 @@ import router from './router'
 import './assets/base.less'
 
 import ArcWeUIV1 from '@/index.js'
+import 'mint-ui/lib/style.css'
 import * as common from '$demo/assets/js/common'
 import * as codeSnippet from '$demo/assets/js/codesnippet'
 

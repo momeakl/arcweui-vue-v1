@@ -1,7 +1,6 @@
-import '@/assets/css/index.less'
-import 'mint-ui/lib/style.css'
 import 'static/clouds/style.css'
 import Mint from 'mint-ui'
+import '@/assets/css/index.less'
 import LoadingToast from './components/loading-toast'
 import TyImg from './components/ty-img'
 import PeoperList from './components/peoper-list'
