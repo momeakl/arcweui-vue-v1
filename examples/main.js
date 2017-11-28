@@ -13,7 +13,6 @@ import * as codeSnippet from '$demo/assets/js/codesnippet'
 Vue.use(ArcWeUIV1)
 Vue.config.productionTip = false
 
-Vue.prototype.$fileServer = '/weixin/api/'
 let appMark = 'worklog'
 Vue.prototype.$TyApp = {
   mark: appMark,
