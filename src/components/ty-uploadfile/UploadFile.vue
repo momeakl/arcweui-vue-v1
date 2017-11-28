@@ -85,7 +85,7 @@ export default {
         return
       }
       //这里还存在些不合理，File服务独立的时候，服务器的地址配置 应该是独立配置
-      this.$http.post(this.$TyApp.fileDelete + 'fileIds=' + this.fileList[index].id, {}).then((res) => {
+      this.$http.post(this.$TyApp.api.fileDelete + 'fileIds=' + this.fileList[index].id, {}).then((res) => {
         if (res.data.code === 0) {
           this.fileList.splice(index, 1)
         } else {
