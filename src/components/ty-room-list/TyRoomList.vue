@@ -11,9 +11,6 @@
   </div>
 </template>
 <script>
-const TyGeneralCell = () => import('@/components/common/TyGeneralCell')
-const TyFooterOneButton = () => import('@/components/common/TyFooterOneButton')
-
 export default {
   name: 'TyRoomList',
   props: {
@@ -23,10 +20,6 @@ export default {
         return []
       }
     }
-  },
-  components: {
-    TyGeneralCell,
-    TyFooterOneButton
   },
   data() {
     return {

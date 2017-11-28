@@ -82,8 +82,22 @@
       <mt-cell title="TyReplyList" is-link @click.native="clickHandler('TyReplyList')">
         <i class="fa fa-list" slot="icon"></i>
       </mt-cell>
+      <mt-cell title="TyRoomList" is-link @click.native="clickHandler('TyRoomList')">
+        <i class="fa fa-list" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TySearch" is-link @click.native="clickHandler('TySearch')">
+        <i class="fa fa-search" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyTextarea" is-link @click.native="clickHandler('TyTextarea')">
+        <i class="fa fa-text-width" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="TyTitle" is-link @click.native="clickHandler('TyTitle')">
+        <i class="fa fa-bars" slot="icon"></i>
+      </mt-cell>
+      <mt-cell title="UploadFile" is-link @click.native="clickHandler('UploadFile')">
+        <i class="fa fa-bars" slot="icon"></i>
+      </mt-cell>
     </div>
-
   </div>
 </template>
 <script>

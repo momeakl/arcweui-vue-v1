@@ -12,6 +12,7 @@ import * as codeSnippet from '$demo/assets/js/codesnippet'
 Vue.use(ArcWeUIV1)
 Vue.config.productionTip = false
 
+Vue.prototype.$fileServer = '/weixin/api/'
 let appMark = 'worklog'
 Vue.prototype.$TyApp = {
   mark: appMark,
@@ -53,7 +54,7 @@ Vue.prototype.$TyApp = {
     myAudit: appMark + '/approverList?',
     detail: appMark + '/getDetail?',
     relatedPersons: appMark + '/getLastPersons?',
-    fileUpload: '/weixin/api/file/upload',
+    fileUpload: 'file/upload',
     fileList: 'file/getListByObj?',
     fileDelete: 'file/delete?',
     replyCreate: 'reply/add',

@@ -29,6 +29,11 @@ import TyTopTips from './components/ty-toptips'
 import TyRemark from './components/ty-remark'
 import TyReplyContent from './components/ty-reply-content'
 import TyReplyList from './components/ty-reply-list'
+import TyRoomList from './components/ty-room-list'
+import TySearch from './components/ty-search'
+import TyTextarea from './components/ty-textarea'
+import TyTitle from './components/ty-title'
+import UploadFile from './components/ty-uploadfile'
 
 import axios from 'axios'
 
@@ -59,7 +64,12 @@ const ArcWeUiV1 = {
   TyTopTips,
   TyRemark,
   TyReplyContent,
-  TyReplyList
+  TyReplyList,
+  TyRoomList,
+  TySearch,
+  TyTextarea,
+  TyTitle,
+  UploadFile
 }
 
 const install = function(Vue, config = {}) {

@@ -11,7 +11,6 @@
 </template>
 <script>
 import VueFileUpload from 'vue-file-upload'
-const TyFileList = () => import('@/components/common/TyFileList')
 
 export default {
   name: 'UploadFile',
@@ -26,8 +25,7 @@ export default {
     }
   },
   components: {
-    VueFileUpload,
-    TyFileList
+    VueFileUpload
   },
   watch: {
     files(newValue) {
@@ -39,7 +37,7 @@ export default {
       title: '附件',
       fileList: this.files,
       autoUpload: false,
-      serverUrl: this.$fileServer + 'file/upload',
+      serverUrl: this.$fileServer + this.$TyApp.api.fileUpload,
       cbEvents: {
         onCompleteUpload: (file, response, status, header) => {
           if (response.code === 0) {
@@ -62,9 +60,9 @@ export default {
           }
         },
         onErrorUpload: (file, response, status, headers) => {
-          if (response.code !== 0) {
+          if (!response || response.code !== 0) {
             this.fileList.pop()
-            TyCommon.info(response.message)
+            TyCommon.info(response ? response.message : '上传失败')
           }
         },
         onProgressUpload: (file, progress) => {
@@ -75,7 +73,7 @@ export default {
     }
   },
   computed: {
-    attachmentLabel: function() {
+    attachmentLabel: function () {
       return this.title + '(' + this.fileList.length + ')'
     }
   },
@@ -86,7 +84,8 @@ export default {
         this.fileList.splice(index, 1)
         return
       }
-      this.$http.post('file/delete?fileIds=' + this.fileList[index].id, {}).then((res) => {
+      //这里还存在些不合理，File服务独立的时候，服务器的地址配置 应该是独立配置
+      this.$http.post(this.$TyApp.fileDelete + 'fileIds=' + this.fileList[index].id, {}).then((res) => {
         if (res.data.code === 0) {
           this.fileList.splice(index, 1)
         } else {

@@ -43,18 +43,26 @@ export default {
       if (newValue.length === 0) {
         this.search()
       }
+    },
+    readonly(newValue) {
+      this.setInputReadonly()
     }
   },
   mounted() {
     this.$nextTick(() => {
+      this.setInputReadonly()
+    })
+  },
+  methods: {
+    setInputReadonly() {
       this.searchDom = document.getElementById('txtSearch')
       if (this.readonly) {
         this.searchDom.setAttribute('readonly', 'readonly')
         document.getElementById('clearIcon').style.display = 'block'
+      } else {
+        this.searchDom.removeAttribute('readonly')
       }
-    })
-  },
-  methods: {
+    },
     search(isSearch) {
       if (isSearch && (this.searchText.length === 0 || /^\s+$/.test(this.searchText))) {
         TyCommon.info('请输入搜索内容')

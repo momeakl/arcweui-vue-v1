@@ -1,9 +1,9 @@
-# arcweui-vue
-weui的vue版本
+# arcweui-vue-v1
+weui的vue版本(此版本非通用组件，更多是业务组件，不适合外部使用)
 # 说明
 样式依赖weui css，[weui链接地址](https://github.com/Tencent/weui/wiki/getting-started)
 
-#扫码快速体验
+<!-- #扫码快速体验 -->
 
    <!-- ![enter image description here](https://tkggusraqk.github.io/arcweuivue-demo/QRCode.png)
 
@@ -75,6 +75,15 @@ Vue.use(ArcWeUIV1)
 
    TyReplyList
 
+   TyRoomList
+
+   TySearch
+
+   TyTextarea
+
+   TyTitle
+
+   UploadFile
 
 ## Links
 

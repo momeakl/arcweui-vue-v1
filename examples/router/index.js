@@ -30,6 +30,11 @@ components.push({ component: 'TyTopTips', name: 'TyTopTips', path: '/TyTopTips' 
 components.push({ component: 'TyRemark', name: 'TyRemark', path: '/TyRemark' })
 components.push({ component: 'TyReplyContent', name: 'TyReplyContent', path: '/TyReplyContent' })
 components.push({ component: 'TyReplyList', name: 'TyReplyList', path: '/TyReplyList' })
+components.push({ component: 'TyRoomList', name: 'TyRoomList', path: '/TyRoomList' })
+components.push({ component: 'TySearch', name: 'TySearch', path: '/TySearch' })
+components.push({ component: 'TyTextarea', name: 'TyTextarea', path: '/TyTextarea' })
+components.push({ component: 'TyTitle', name: 'TyTitle', path: '/TyTitle' })
+components.push({ component: 'UploadFile', name: 'UploadFile', path: '/UploadFile' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
