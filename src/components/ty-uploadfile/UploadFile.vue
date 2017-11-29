@@ -66,7 +66,6 @@ export default {
           }
         },
         onProgressUpload: (file, progress) => {
-          console.log(progress)
           this.fileList[this.fileList.length - 1].process = progress
         }
       }

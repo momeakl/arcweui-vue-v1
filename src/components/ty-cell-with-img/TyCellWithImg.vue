@@ -1,7 +1,7 @@
 <template>
   <a class="ty-cell-withimg weui-cell weui-cell_access" @click="itemClick" href="javascript:;">
     <div class="weui-cell__hd">
-      <img v-lazy="avatar" alt="头像" :width="avatarWidth" :height="avatarHeight" class="avatar">
+      <img v-lazy="lazyImgObj" alt="头像" :width="avatarWidth" :height="avatarHeight" class="avatar">
     </div>
     <div class="weui-cell__bd">
       <div class="home-title">
@@ -53,9 +53,19 @@ export default {
       default: 40
     }
   },
+  watch: {
+    avatar(val) {
+      this.lazyImgObj.src = val
+    }
+  },
   data() {
     return {
-      key: this.tag
+      key: this.tag,
+      lazyImgObj: {
+        src: this.avatar,
+        error: require('../../assets/head.png'),
+        loading: require('../../assets/head.png')
+      }
     }
   },
   methods: {

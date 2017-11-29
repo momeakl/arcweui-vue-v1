@@ -18,7 +18,7 @@ export default {
   props: {
     btnName: {
       type: Array,
-      default: function() {
+      default: function () {
         return ['存草稿', '提交']
       }
     },
@@ -47,11 +47,6 @@ export default {
   }
 }
 </script>
-<style >
-.mint-navbar .mint-tab-item {
-  padding: 10px;
-}
-</style>
 
 <style lang="less">
 .ty-footer {
@@ -59,6 +54,9 @@ export default {
   bottom: 0px;
   width: 100%;
   z-index: 100;
+  .mint-navbar .mint-tab-item {
+    padding: 10px;
+  }
 }
 </style>
 

@@ -1,6 +1,6 @@
 import 'static/clouds/style.css'
-import Mint from 'mint-ui'
 import '@/assets/css/index.less'
+import Mint from 'mint-ui'
 import LoadingToast from './components/loading-toast'
 import TyImg from './components/ty-img'
 import PeoperList from './components/peoper-list'
@@ -80,6 +80,14 @@ const install = function(Vue, config = {}) {
     lazyload: {
       error: require('./assets/head.png'),
       loading: require('./assets/head.png')
+    },
+    adapter: {
+      loading(listender, Init) {
+        bus.$emit('lzayloading')
+      },
+      error(listender, Init) {
+        bus.$emit('lzayerror')
+      }
     }
   })
   Vue.prototype.$http = axios
