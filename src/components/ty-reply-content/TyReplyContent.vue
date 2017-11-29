@@ -135,9 +135,15 @@ export default {
       }
     },
     setInputFocus() {
-      this.isFacePanelShow = false
       //解决ios整体上推 显示底部操作栏
-      contentDom.focus()
+      this.isFacePanelShow = false
+      //光标定位文本最后
+      if (window.getSelection) {
+        contentDom.focus()
+        let range = window.getSelection()
+        range.selectAllChildren(contentDom)
+        range.collapseToEnd()
+      }
       this.checkInput()
       setTimeout(() => {
         //适应大小屏幕 先让底部操作栏滚动到可视区域 ，然后再让输入框滚动到可视区域
