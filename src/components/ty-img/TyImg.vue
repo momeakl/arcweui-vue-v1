@@ -1,6 +1,6 @@
 <template>
   <div class="ty-img" @click="clickHandler">
-    <img v-lazy="src" width="40" />
+    <img v-lazy="lazyImgObj" width="40" />
     <p v-html="name"></p>
   </div>
 </template>
@@ -17,9 +17,19 @@ export default {
       default: ''
     }
   },
-  mounted() { },
+  watch: {
+    src(val) {
+      this.lazyImgObj.src = val
+    }
+  },
   data() {
-    return {}
+    return {
+      lazyImgObj: {
+        src: this.src,
+        error: require('../../assets/head.png'),
+        loading: require('../../assets/head.png')
+      }
+    }
   },
   methods: {
     clickHandler() {

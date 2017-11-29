@@ -1,6 +1,6 @@
 <template>
   <div class="ty-cell weui-cells">
-    <img class="avatar" :class="{'float-left':avatar!=null}" v-if="avatar!=null" v-lazy="avatar" />
+    <img class="avatar" :class="{'float-left':avatar!=null}" v-if="avatar!=null" v-lazy="lazyImgObj" />
     <div class="title">
       <span v-text="title"></span>
       <span v-text="label" class="ty-cell-label"></span>
@@ -55,11 +55,19 @@ export default {
   watch: {
     delStatus(val) {
       this.deleteStatus = val
+    },
+    avatar(val) {
+      this.lazyImgObj.src = val
     }
   },
   data() {
     return {
-      deleteStatus: this.delStatus
+      deleteStatus: this.delStatus,
+      lazyImgObj: {
+        src: this.src,
+        error: require('../../assets/head.png'),
+        loading: require('../../assets/head.png')
+      }
     }
   },
   methods: {
