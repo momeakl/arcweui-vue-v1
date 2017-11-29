@@ -37,7 +37,7 @@ export default {
       title: '附件',
       fileList: this.files,
       autoUpload: false,
-      serverUrl: this.$TyApp.api.fileUpload,
+      serverUrl: this.$fileServer + this.$TyApp.api.fileUpload,
       cbEvents: {
         onCompleteUpload: (file, response, status, header) => {
           if (response.code === 0) {

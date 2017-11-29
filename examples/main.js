@@ -10,6 +10,8 @@ import 'mint-ui/lib/style.css'
 import * as common from '$demo/assets/js/common'
 import * as codeSnippet from '$demo/assets/js/codesnippet'
 
+Vue.prototype.$fileServer = '/weixin/api/'
+
 Vue.use(ArcWeUIV1)
 Vue.config.productionTip = false
 
