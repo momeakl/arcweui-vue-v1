@@ -135,6 +135,7 @@ export default {
       }
     },
     setInputFocus() {
+      this.isFacePanelShow = false
       //解决ios整体上推 显示底部操作栏
       contentDom.focus()
       this.checkInput()
