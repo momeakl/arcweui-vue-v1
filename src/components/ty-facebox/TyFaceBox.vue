@@ -1,10 +1,6 @@
 <template>
-  <!-- //这里为什么不用v-if -->
-  <!-- <div class='faceBox' v-if='show'> -->
-  <div class='faceBox' v-show='value'>
-    <template v-for='(item, i) in facelist'>
-      <img @click="selectFace(item)" :key="i" v-lazy="getFace(item)" class="em_face" alt="">
-    </template>
+  <div class="faceBox" v-show="value">
+    <img v-for="(item, i) in facelist" @click="selectFace(item)" :key="i" v-lazy="getFace(item)" class="em_face" alt="">
   </div>
 </template>
 <script>
@@ -33,7 +29,9 @@ export default {
         'relieved',
         'satisfied',
         'grin',
-        'wink',
+        'wink'
+      ],
+      allFace: [
         'stuck_out_tongue_winking_eye',
         'stuck_out_tongue_closed_eyes',
         'grinning',
@@ -211,8 +209,7 @@ export default {
         'rage3',
         'rage4',
         'suspect',
-        'trollface'
-      ],
+        'trollface'],
       imgObj: {
         src: '',
         error: require('../../assets/img/error.png'),
@@ -220,7 +217,12 @@ export default {
       }
     }
   },
-  mounted() { },
+  mounted() {
+    //解决一次加载 页面假死
+    setTimeout(() => {
+      this.initFace()
+    }, 2000)
+  },
   methods: {
     selectFace: function (item) {
       let face = '<img src="static/emojis/' + item + '.png" />'
@@ -229,6 +231,14 @@ export default {
     },
     getFace(name) {
       return Object.assign({}, this.imgObj, { src: 'static/emojis/' + name + '.png' })
+    },
+    initFace() {
+      if (this.allFace.length > 0) {
+        this.facelist = this.facelist.concat(this.allFace.splice(0, this.allFace.length > 20 ? 20 : this.allFace.length))
+        setTimeout(() => {
+          this.initFace()
+        }, 2000)
+      }
     }
   }
 }

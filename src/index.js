@@ -35,8 +35,8 @@ import TyTitle from './components/ty-title'
 import UploadFile from './components/ty-uploadfile'
 
 import axios from 'axios'
-
 require('core-js')
+
 const ArcWeUiV1 = {
   LoadingToast,
   TyImg,
@@ -80,14 +80,6 @@ const install = function(Vue, config = {}) {
     lazyload: {
       error: require('./assets/head.png'),
       loading: require('./assets/head.png')
-    },
-    adapter: {
-      loading(listender, Init) {
-        bus.$emit('lzayloading')
-      },
-      error(listender, Init) {
-        bus.$emit('lzayerror')
-      }
     }
   })
   Vue.prototype.$http = axios

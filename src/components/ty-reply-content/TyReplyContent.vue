@@ -72,6 +72,7 @@ export default {
       if (!wx) {
         TyCommon.info('初始化人员信息')
       } else {
+        TyCommon.info('正在初始化人员信息')
         CodeSnippet.wxJsSdkInit((result) => {
           this.wxData = result
           this.isJsSdk = true
