@@ -93,7 +93,6 @@ export default {
       }).catch((error) => {
         TyCommon.info(error.message)
       })
-      this.fileList.splice(index, 1)
     }
   }
 }
