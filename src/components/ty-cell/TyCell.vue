@@ -64,7 +64,7 @@ export default {
     return {
       deleteStatus: this.delStatus,
       lazyImgObj: {
-        src: this.src,
+        src: this.avatar,
         error: require('../../assets/head.png'),
         loading: require('../../assets/head.png')
       }
