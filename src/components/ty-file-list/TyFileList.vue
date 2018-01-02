@@ -17,18 +17,25 @@
             <mt-progress v-show="item.isUpload" :value="item.process" :bar-height="3"></mt-progress>
           </div>
           <span v-if="isShowDel" class="del clouds-delete" @click="delHandler(index)"></span>
-          <a class="down" target="_blank" v-else :href="url+'file/download?fileId='+item.id">
+          <span @click="copyUrl(item.id)" v-else>
             <span class="clouds clouds-download">
             </span>
-          </a>
+          </span>
+          <!-- <a class="down" target="_blank" :href="url+'file/download?fileId='+item.id">
+            <span class="clouds clouds-download">
+            </span>
+          </a> -->
         </a>
       </div>
+    </div>
+    <div class="urlBox">
+      <input type="text" id="url"/>
     </div>
   </div>
 </template>
 <script>
+import 'core-js/fn/array/includes'
 export default {
-  name: 'TyFileList',
   props: {
     files: {
       type: Array,
@@ -39,8 +46,11 @@ export default {
       default: true
     }
   },
+  mounted() {
+    this.http = window.location.host
+  },
   data() {
-    return { url: this.$fileServer }
+    return { url: this.$fileServer, http: '' }
   },
   methods: {
     getFileIcon(index) {
@@ -64,12 +74,32 @@ export default {
     },
     delHandler(index) {
       this.$emit('del', index)
+    },
+    copyUrl(id) {
+      var http = this.http + this.url + 'file/download?fileId=' + id
+      document.getElementById('url').value = http
+      // this.$messagebox.prompt('请输入姓名').then(({ value, action }) => {
+      //   debugger
+      // })
+      // var url = document.getElementsByClassName('mint-msgbox-message')
+      // url.select()
+      // document.execCommand('Copy')
+      if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+        window.location.href = this.url + 'file/download?fileId=' + id
+      } else {
+        var url2 = document.getElementById('url')
+        url2.select()
+        document.execCommand('Copy')
+        url2.blur()
+        this.$messagebox('提示', '文件地址已复制，请使用外部浏览器打开！')
+      }
     }
   }
 }
 </script>
 <style lang="less">
 .ty-file-list {
+  position: relative;
   .weui-cell_primary {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -112,6 +142,10 @@ export default {
   .mt-progress {
     height: 3px;
     line-height: 3px;
+  }
+  .urlBox{
+    position: absolute;
+    left: -200px;
   }
 }
 </style>
