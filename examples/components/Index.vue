@@ -13,6 +13,9 @@
       <mt-cell title="PeoperList" is-link @click.native="clickHandler('PeoperList')">
         <i class="fa fa-user-plus" slot="icon"></i>
       </mt-cell>
+      <mt-cell title="Persion" is-link @click.native="clickHandler('Persion')">
+        <i class="fa fa-user-plus" slot="icon"></i>
+      </mt-cell>
       <mt-cell title="SeparateLines" is-link @click.native="clickHandler('SeparateLines')">
         <i class="fa fa-terminal" slot="icon"></i>
       </mt-cell>

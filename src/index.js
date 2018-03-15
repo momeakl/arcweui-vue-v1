@@ -1,9 +1,12 @@
 import 'static/clouds/style.css'
 import '@/assets/css/index.less'
+import 'vodal/common.css'
+import 'vodal/slide-right.css'
 import Mint from 'mint-ui'
 import LoadingToast from './components/loading-toast'
 import TyImg from './components/ty-img'
 import PeoperList from './components/peoper-list'
+import Persion from './components/persion'
 import SeparateLines from './components/separate-lines'
 import TyEmpty from './components/ty-empty'
 import TyAutoLoad from './components/ty-auto-load'
@@ -41,6 +44,7 @@ const ArcWeUiV1 = {
   LoadingToast,
   TyImg,
   PeoperList,
+  Persion,
   SeparateLines,
   TyEmpty,
   TyAutoLoad,
