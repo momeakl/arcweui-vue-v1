@@ -20,7 +20,7 @@
                   <input type="checkbox" v-model="item.check" :disabled="item.disabled" class="weui-check" @click.stop="checked" >
                   <i class="weui-icon-checked" v-bind:class="{'weui-icon-checked-disable' : item.disabled}"></i>
                 </label>
-                <div class="weui-cell__hd items" style="flex:1 1 100%" @click="switchChildren(item)">
+                <div class="weui-cell__hd" style="flex:1 1 100%" @click="switchChildren(item)">
                   <img v-lazy="lazyImgObj" alt="头像" width="24" height="24" style="vertical-align: middle;border-radius: 4px;">
                   {{item.dept.deptName}}
 
@@ -58,7 +58,7 @@
                   <input type="checkbox" v-model="item.check" :disabled="item.disabled" class="weui-check" @click.stop="checked" >
                   <i class="weui-icon-checked" v-bind:class="{'weui-icon-checked-disable' : item.disabled}"></i>
                 </label>
-                <div class="weui-cell__hd items" style="flex:1 1 100%" @click="switchChildren(item,true)">
+                <div class="weui-cell__hd" style="flex:1 1 100%" @click="switchChildren(item,true)">
                   <img v-lazy="lazyImgObj" alt="头像" width="24" height="24" style="vertical-align: middle;border-radius: 4px;">
                   {{item.dept.deptName}}
 
@@ -94,9 +94,10 @@
 </template>
 <script>
   import vodal from 'vodal'
-  const Search = () => import('./Search')
-  const TitleCell = () => import('./TitleCell')
-  const PersionFooter = () => import('./PersionFooter')
+  import Search from './Search'
+  import TitleCell from './TitleCell'
+  import PersionFooter from './PersionFooter'
+  
   export default {
     name: 'Persion',
     props: {
@@ -483,10 +484,4 @@
     color: midnightblue;
     text-overflow: ellipsis
   }
-  .items{
-      width: 200px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
 </style>
