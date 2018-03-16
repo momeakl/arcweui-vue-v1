@@ -98,8 +98,37 @@ export default {
 }
 </script>
 <style lang="less">
+  .vue-file-upload{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    color:#fff;
+    padding:6px 12px;
+    background-color:#5cb85c;
+    border-color: #4cae4c;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .vue-file-upload input[type=file]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: alpha(opacity=0);
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+  }
+
 .ty-upload-file {
-  .fileupload-button {
+  .vue-file-upload {
     color: #999 !important;
     background-color: white !important;
     border-color: white !important;
