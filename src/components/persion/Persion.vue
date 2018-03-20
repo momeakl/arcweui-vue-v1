@@ -16,7 +16,7 @@
           <div class="weui-cells weui-cells_checkbox" >
             <div v-if="curDeptNode!=null" style="display: flex;width: 100%;flex-direction: column; flex-wrap: wrap;align-content: stretch;">
               <div v-for="item in curDeptNode.children" class="weui-cell weui-check__label weui-cell_access" style="display: flex; ">
-                <label class="weui-cell__hd" style="flex: 0 0 auto;" :id="item.dept.id" ref="item.dept.id" @click="checkDept(item)">
+                <label class="weui-cell__hd" style="flex: 0 0 auto;" :id="item.dept.id" ref="item.dept.id"  @click="checkDept(item)">
                   <input type="checkbox" v-model="item.check" :disabled="item.disabled" class="weui-check" @click.stop="checked" >
                   <i class="weui-icon-checked" v-bind:class="{'weui-icon-checked-disable' : item.disabled}"></i>
                 </label>
@@ -50,7 +50,7 @@
           </div>
 
         </div>
-        <div class="body" v-if="!showInitResult">
+        <div class="vbody" v-if="!showInitResult">
           <div class="weui-cells weui-cells_checkbox" >
             <div v-if="schDeptNode!=null" style="display: flex;width: 100%;flex-direction: column; flex-wrap: wrap;align-content: stretch;">
               <div v-for="item in schDeptNode.children" class="weui-cell weui-check__label weui-cell_access" style="display: flex; ">
@@ -97,7 +97,7 @@
   import Search from './Search'
   import TitleCell from './TitleCell'
   import PersionFooter from './PersionFooter'
-  
+
   export default {
     name: 'Persion',
     props: {
@@ -171,6 +171,40 @@
         if (!this.deptList.includes(item)) {
           this.deptList.push(item)
           this.selected.push(item)
+          let rmArr = []
+          // 业务：若选择上一级了，footbar 中选中下级的自动消失判断item 的子元素是否在selected 中 ，若存在则移除
+          this.selected.map((sitem) => {
+            if (item.children) {
+              item.children.map((child) => {
+                if (child.dept && sitem.dept && child.dept.deptId === sitem.dept.deptId) {
+                  rmArr.push(sitem)
+                }
+              })
+            }
+            if (item.employeeBeans) {
+              item.employeeBeans.map((emp) => {
+                if (sitem.empId && sitem.empId === emp.empId) {
+                  rmArr.push(sitem)
+                }
+              })
+            }
+          })
+          if (rmArr.length > 0) {
+            rmArr.map((rmItem) => {
+              let index = this.selected.indexOf(rmItem)
+              if (index !== -1) {
+                this.selected.splice(index, 1)
+              }
+              let deptIndex = this.deptList.indexOf(rmItem)
+              if (deptIndex !== -1) {
+                this.deptList.splice(deptIndex, 1)
+              }
+              let empIndex = this.empList.indexOf(rmItem)
+              if (empIndex !== -1) {
+                this.empList.splice(empIndex, 1)
+              }
+            })
+          }
         } else {
           this.deptList.map((deptNode) => {
             if (deptNode.dept.deptId === item.dept.deptId) {

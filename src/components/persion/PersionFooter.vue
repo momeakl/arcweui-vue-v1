@@ -113,7 +113,7 @@ export default {
     display: inline-block;
     text-align: center;
     background-color: #f6f8fa;
-    width: 120px;
+    max-width: 120px;
     padding-left: 5px;
     padding-right: 5px;
     text-overflow: ellipsis;
